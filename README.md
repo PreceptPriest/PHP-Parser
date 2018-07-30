@@ -5,6 +5,7 @@ PHP Parser
 
 This is a PHP 5.2 to PHP 7.2 parser written in PHP. Its purpose is to simplify static code analysis and
 manipulation.
+这是一个使用PHP编写的支持处理PHP 5.2 - PHP 7.2 的解析器，用以简化静态代码分析与相关操作。
 
 [**Documentation for version 4.x**][doc_master] (stable; for running on PHP >= 7.0; for parsing PHP 5.2 to PHP 7.2).
 
@@ -14,15 +15,23 @@ Features
 --------
 
 The main features provided by this library are:
-
+本库提供的主要功能有：
  * Parsing PHP 5 and PHP 7 code into an abstract syntax tree (AST).
+ * 解析PHP5和PHP7的代码，生成抽象语法树（AST）。
    * Invalid code can be parsed into a partial AST.
+   * 无效代码也可被解析进局部AST。
    * The AST contains accurate location information.
+   * AST包含了精确的代码位置信息。
  * Dumping the AST in human-readable form.
+ * 将AST以可阅读的格式dump出来。
  * Converting an AST back to PHP code.
+ * 将AST转化回PHP代码。
    * Experimental: Formatting can be preserved for partially changed ASTs.
+   * 实验特性：对AST局部变更的格式化设置可被保存（复用）。
  * Infrastructure to traverse and modify ASTs.
+ * 提供遍历与变更AST的功能。
  * Resolution of namespaced names.
+ * 识别命名空间中的变量名。
  * Evaluation of constant expressions.
  * Builders to simplify AST construction for code generation.
  * Converting an AST into JSON and back.
